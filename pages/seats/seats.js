@@ -8,6 +8,7 @@ Page({
     seatNumbers: [], // 座位号数组
     timeSlots: ['09:00', '10:00', '11:00', '12:00'] // 示例时间段
   },
+  
 
   onLoad() {
     this.loadSeats();

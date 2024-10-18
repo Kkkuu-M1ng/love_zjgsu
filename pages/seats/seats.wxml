@@ -3,6 +3,7 @@
 
   <image class="library-image" src="/pages/image/banner.jpg" mode="aspectFill" />
 
+
   <view class="floor-switch">
     <button data-floor="1" bindtap="switchFloor">1楼</button>
     <button data-floor="2" bindtap="switchFloor">2楼</button>
