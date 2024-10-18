@@ -1,0 +1,40 @@
+<view class="container">
+  <!-- 顶部图片 -->
+  <image class="banner" src="/pages/image/banner.jpg" mode="widthFix" />
+
+  <!-- 公告文本 -->
+  <view class="announcement">
+    <text class="announcement-text">欢迎使用图书馆预约系统！</text>
+  </view>
+
+  <!-- 新闻公告 -->
+  <view class="news">
+    <view class="news-item">
+      <image class="news-image" src="{{newsItem1.imageUrl}}" mode="aspectFill"></image>
+      <view class="news-text">
+        <text class="news-title">{{newsItem1.title}}</text>
+        <text class="news-description">{{newsItem1.description}}</text>
+      </view>
+    </view>
+    <view class="news-item">
+      <image class="news-image" src="{{newsItem2.imageUrl}}" mode="aspectFill"></image>
+      <view class="news-text">
+        <text class="news-title">{{newsItem2.title}}</text>
+        <text class="news-description">{{newsItem2.description}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部导航栏 -->
+  <view class="footer">
+    <view class="footer-item" bindtap="navigateToHome">
+      <image class="footer-icon" src="/pages/image/首页.png" /> 首页
+    </view>
+    <view class="footer-item" bindtap="navigateToSeats">
+      <image class="footer-icon" src="/pages/image/map.png" /> 座位
+    </view>
+    <view class="footer-item" bindtap="navigateToProfile">
+      <image class="footer-icon" src="/pages/image/我的.png" /> 我的
+    </view>
+  </view>
+</view>

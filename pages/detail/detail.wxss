@@ -1,0 +1,97 @@
+/* pages/detail/detail.wxss */
+.img{
+	width: 100%;
+	display: inherit;
+}
+
+.img-2{
+	width:20%;
+	display: inherit;
+	border-radius: 30rpx;
+	border: 2rpx solid black;
+	margin-top: -60rpx;
+	margin-right: 4%;
+	float: right;
+}
+
+.name{
+	margin-top: 10%;
+	display: flex;
+	font-size: 40rpx;
+	justify-content: center;
+	font-weight:bolder;
+}
+
+.text-1{
+	height: 150rpx;
+}
+
+.content{
+	height: 400px;
+}
+
+.img-3{
+	width: 100%;
+	margin-bottom: 7%;
+	border-radius: 25rpx;
+	margin-left: 5%;
+}
+
+.text-2{
+	font-size: 25rpx;
+	padding-left: 5%;
+	padding-right: 4%;
+}
+
+.detail{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.text-3{
+	font-size: 25rpx;
+	padding-top: 5%;
+	padding-left: 5%;
+}
+
+
+
+.dis{
+	display: flex;
+	align-items: center;
+}
+
+.text-4{
+	font-size: 20rpx;
+}
+
+
+
+.image{
+	width: 100rpx;
+  height: 100rpx;
+
+}
+
+.like-1{
+	margin-left: 16%;
+}
+
+.like-2{
+	margin-left: 13%;
+}
+
+
+.text-line{
+	height: 10%;
+	font-size: 13px;
+	font-weight: lighter;
+	border-radius: 5rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.text-url{
+	/* color: beige; */
+	white-space: pre-wrap;
+}

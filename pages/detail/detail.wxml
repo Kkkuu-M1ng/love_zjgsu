@@ -1,0 +1,36 @@
+<!--pages/detail/detail.wxml-->
+<view class="img-first">
+	<image class="img" src="{{list.url}}"></image>
+	<image class='img-2' src="{{list.ui}}" mode="widthFix"></image>
+</view>
+
+<view class="text-1">
+	<text class="name">{{list.name}}</text>
+</view>
+
+<scroll-view class="content">
+	<view class="detail">
+		<image mode="widthFix" class="img-3" src="{{list.url2}}"></image>
+		<text class="text-2">{{list.info}}</text>
+	</view>
+	<view class="dis">
+		<view class="text-3">
+			<text>离您约{{distance}}km</text>
+		</view>
+		<view class="like-1" catch:tap="shoucang" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
+     		<image class = "image" src = "{{isshoucang?'/pages/image/收藏.png':'/pages/image/收藏 (1).png'}}"></image>
+   			<view class="text-4">收藏</view>
+		</view>
+
+		<view style="display: flex;justify-content: center;align-items: center;flex-direction: column;" class="like-2" bind:tap="daka">
+			<image class="image" src="/pages/image/签到打卡.png"></image>
+			<view class="text-4">打卡</view>
+		</view>
+	</view>
+	<view style="font-size: 17px;font-weight: bolder;margin-left: 5%;">信息聚合</view>
+	<view class="text-line">
+		<text bindtap="copyText" class="text-url" decode="{{true}}" space="{{true}}">1.&nbsp;&nbsp;官网首页："{{src}}"</text>
+	</view>
+</scroll-view>
+
+

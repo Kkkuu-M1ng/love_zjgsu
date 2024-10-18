@@ -1,0 +1,14 @@
+/* pages/map/map.wxss */
+page{
+	height: 100%;
+}
+.explain{
+	margin: auto;
+	text-align: center;
+}
+.image1{
+	height: 100px;
+	width: 100px;
+	position: relative;
+	left: 40%;
+}

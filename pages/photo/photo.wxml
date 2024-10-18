@@ -1,0 +1,23 @@
+<!--pages/photo/photo.wxml-->
+<form bindsubmit="formsubmit">
+<view class='input1'>
+	<lable class='input2' for='txt'>打卡详情：</lable>
+	<textarea class="input3" id="txt" wx:if="{{!content}}" placeholder="记录你的打卡之旅吧！" name='record'></textarea>
+	<textarea class="input3" id="txt" wx:else placeholder="{{content}}" name='record'></textarea>
+</view>
+<view class="item">
+	<view class="item-name">上传图片</view>
+	<view class="item-all">
+		<view class="img" wx:for="{{imgs}}" wx:key="item">
+			<image class="img-size2" wx:if="{{imgs.length>0}}" src="{{item.tempFilePath}}" alt=""></image>
+			<view class="delete" bindtap="deleteimg" data-index="{{index}}">
+				<image  class="img-size" src="/pages/image/叉叉.png"></image>
+			</view>
+		</view>
+		<view class="img-upload" wx:if="{{imgs.length>=3?false:true}}" bindtap="upload">
+			<view>+</view>
+		</view>
+	</view>
+</view>
+<button class="button" form-type="submit" data-id="{{id}}">打卡！</button>
+</form>

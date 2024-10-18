@@ -1,0 +1,27 @@
+<!--pages/me/me.wxml-->
+<view class="avatar">
+	<view class="sum">
+		<image  class='image' src="{{avatar}}"></image>
+		<text class="character">{{nickName}}</text>
+	</view>
+</view>
+
+<view class="item" bind:tap="navi">
+		<view class="item-front">
+			<image class="front-image" src="/pages/image/排行榜.png"></image>
+			<text class="front-character">排行榜</text>
+		</view>
+		<view class="item-behind">
+			<image class="behind-image" src="/pages/image/right.png"></image>
+		</view>
+</view>
+
+<view class="item" bind:tap="navi2">
+		<view class="item-front">
+			<image class="front-image2" src="/pages/image/收藏.png"></image>
+			<text class="front-character2">收藏</text>
+		</view>
+		<view class="item-behind">
+			<image class="behind-image" src="/pages/image/right.png"></image>
+		</view>
+</view>

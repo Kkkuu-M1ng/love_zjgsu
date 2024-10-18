@@ -1,0 +1,39 @@
+<view class="total">
+		<swiper class="top"	indicator-dots="true" autoplay="true" indicator-active-color="#ffffff" circular="true" indicator-type="expand">
+			<swiper-item class="item">
+				<image src="cloud://yp-6g773pfw08e78829.7970-yp-6g773pfw08e78829-1314704929/image/33.png" mode=""></image>
+			</swiper-item>
+			<swiper-item class="item">
+				<image src="cloud://yp-6g773pfw08e78829.7970-yp-6g773pfw08e78829-1314704929/image/34.png" mode=""></image>
+			</swiper-item>
+		</swiper>
+		<view class="tab1">
+            <view class="tab11"></view>
+            鲸探甄选
+        </view>
+        <view>
+			<view class="ttotal">
+				<image class="pictop" src="cloud://yp-6g773pfw08e78829.7970-yp-6g773pfw08e78829-1314704929/image/32.jpg" mode="widthFix"></image>
+				<view class="texttop">
+					<text>日斗千金</text>
+					<text>18积分</text>
+				</view>
+			</view>
+		</view>
+		<view class="tab2">
+            <view class="tab21"></view>
+            当下热卖
+        </view>
+		<view class="shop">
+			<view class="shop-item" wx:for="{{homedata}}" wx:key="id" bindtap="detail" data-id="{{item.id}}">
+				<image src="{{item.url}}" mode=""></image>
+				<text class="title">{{item.name}}</text>
+				<view class="price" decode>
+                    <view class="price1">限量</view>
+                    <view class="price2">{{item.num}}份</view>
+                    <view class="price3">{{item.price}}积分</view>
+                </view>
+			</view>
+		</view>
+		<view class="end">没有更多了</view>
+</view>

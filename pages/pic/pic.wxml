@@ -1,0 +1,68 @@
+<!--pages/pic/pic.wxml-->
+<view class="img-first">
+	<image class="img" src="{{url}}"></image>
+	<image class='img-2' src="{{ui}}" mode="widthFix"></image>
+</view>
+
+<!-- <view class="ui"> -->
+	<image class="img-3" bind:tap="upload" src="/pages/image/加号.png" data-id="{{id}}" mode="widthFix"></image>
+<!-- </view> -->
+
+<scroll-view class="content">
+	<!-- <image class="img-3" bind:tap="upload" src="/pages/image/加号.png" data-id="{{id}}" mode="widthFix"></image> -->
+	<view wx:for="{{list}}" wx:for-index="first"  wx:key="index" class="detail">
+		<view style="display: flex;flex-direction: column;">
+			<image src="{{item.src}}" mode="widthFix" class="image"/>
+			<view  style="display: flex;flex-direction: row;">
+				<image bind:tap="deleteinfo" data-id="{{item._id}}" src="../image/删除.png" style="height: 35px;width: 35px;padding-top: 110px;padding-left: 9px;"></image>
+			</view>
+		</view>
+		<view class="right" style="padding-left: 7px;display: flex;flex-direction: column;">
+		<!-- 区别评论按键 -->
+		<view>
+		<view style="display: flex;flex-direction: row;">
+			<view style="display: flex;flex-direction: column;">
+				<text class="name">{{item.name}}</text>
+				<text class="text">{{item.text}}</text>
+			</view>
+			<view bind:tap="likeinfo" data-id="{{item._id}}" style="display: flex;flex-direction: row;">
+				<image wx:if="{{is_like[item.order-1]}}"   src='../image/爱心.png' class="love"/>
+				<image wx:else src='../image/爱心 (1).png'  class="love"/>
+				<text class='love_text'>{{item.love_text}}</text>
+			</view>
+		</view>
+			<view class="photo" style="display: flex;flex-direction: row;">
+				<block wx:for="{{item.url}}" wx:key="index">
+					<image src="{{item}}"  bind:tap="preview" mode="aspectFill" data-src="{{item}}" data-id="{{first}}" class="image-2"></image>
+				</block>
+			</view>
+		</view>
+		<!-- 评论按键 -->
+		<view data-id="{{item._id}}" bind:tap="onClose" catch:tap="selectTap">
+			<image src="../image/评论.png" style="height: 30px;width: 30px;padding-left: 255px;padding-top: 20px;"></image>
+		</view>
+		<view>
+			<van-popup custom-style='style' bind:close="Close" overlay="{{ true }}" position="bottom" show="{{ show }}">
+      		<view class='popup'>
+        		<input class='input' value="{{comment}}" bindinput="inputGet" placeholder-class="placeholderStyle" placeholder='想说的话......'></input>
+        		<button class='button' data-id="{{item._id}}" catch:tap="infoSet">发送</button>
+        	</view>
+			</van-popup>
+		</view>
+
+		<!-- <view style="background-color: rgb(243, 241, 241);width: 100%;height: 60px;margin-bottom: 20px;position: relative;">
+			<view wx:for="{{item.comment_user}}" wx:for-item="name" wx:key="index1" style="margin: 10px;position: absolute;display: flex;flex-direction: column;">
+				<view wx:for="{{item.comment}}" wx:for-item="content" wx:key="index2" style="display: flex;flex-direction: column;">
+					<text style="font-size: small;font-family: 'Courier New', Courier, monospace;">{{name}} : {{content}}</text>
+				</view>
+			</view>
+		</view> -->
+		<view style="background-color: rgb(243, 241, 241); width: 100%; margin-bottom: 20px; display: flex; flex-direction: column;">  
+    		<view wx:for="{{item.comment_user}}" wx:for-item="name" wx:key="index" style="margin-left: 10px;margin-top: 10px; display: flex; flex-direction: column;">  
+            	<text style="font-size: small; font-family: 'Courier New', Courier, monospace;">{{name}} : {{item.comment[index]}}</text>  
+    		</view>  
+		</view>
+
+	</view>
+	</view>
+</scroll-view>

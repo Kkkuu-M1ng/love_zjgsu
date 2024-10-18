@@ -1,0 +1,69 @@
+/* pages/photo/photo.wxss */
+.item .item-name{
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 25rpx;
+}
+
+.item .item-all .img-upload{
+	width: 150rpx;
+	height: 150rpx;
+	text-align: center;
+	border: 2rpx dashed black;
+	line-height: 150rpx;
+	box-sizing: border-box;
+}
+
+.item .item-all{
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 5%;
+	padding-top: 2%;
+}
+
+.item .item-all .img{
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 22rpx;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+
+
+.img-size{
+	width: 30rpx;
+	height: 30rpx;
+	position: absolute;
+	top: -14rpx;
+	right: -14rpx;
+}
+
+.img-size2{
+	width:150rpx;
+	height: 150rpx;
+	box-sizing: border-box;
+}
+
+.input1{
+	letter-spacing: 1rpx;
+	font-size: 25rpx;
+}
+
+.input2{
+	margin-top: 20rpx;
+	margin-left: 25rpx;
+}
+.input3{
+	padding: 10px;
+	margin-left: 20rpx;
+ 	max-width: 100%;
+ 	line-height: 1.5;
+ 	border-radius: 10px;
+  	border: 1px solid #ccc;
+ 	box-shadow: 1px 1px 1px #999;
+	
+}
+
+.button{
+	margin-top: 40rpx;
+}

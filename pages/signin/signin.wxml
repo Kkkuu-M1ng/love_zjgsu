@@ -1,0 +1,31 @@
+<!--pages/signin/signin.wxml-->
+
+<!--location_check_in/location_check_in.wxml-->
+<view class="wholeContinaer">
+	<map id="myMap" wx:if="{{markers}}" markers="{{markers}}" style="width:100%;height:100vh;"longitude="{{poi.longitude}}" latitude="{{poi.latitude}}" scale='16' show-location >
+	</map>
+ 
+	<view class="checkInPanel">
+		<!-- <view class="checkInBtn" bindtap="checkIn" style="background:url('../../images/zcxj/checkInBj.png') center / contain no-repeat"> -->
+		<view class="checkInBtn {{canClick ? '' : 'disableClick'}}" bindtap="checkIn">
+			<view class="checkInTitle">{{qiandao}}</view>
+			<view class="checkInTime">{{time}}</view>
+		</view>
+		<!-- <view class="whitePositionPanel" style="background:url('../../images/zcxj/jxk.png') center / contain no-repeat"> -->
+		<view class="whitePositionPanel">
+			<view class="positonTextRow">
+				<image class="positionIcon" src="/pages/image/position.png"></image>
+				<view class="positionFont">{{addressName}}</view>
+			</view>
+		</view>
+
+		<view class="rePosition1" bindtap="rePosition">
+			<image class="positionIcon1" src="/pages/image/ic_reposition.png"></image>
+			<view class="positionFont1">重新定位</view>
+		</view>
+		<view class="rePosition2" bindtap="getPosition">
+			<image class="positionIcon2" src="/pages/image/ic_reposition.png"></image>
+			<view class="positionFont2">获取距离</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/me/me",
+    "pages/logs/logs",
+    "pages/map/map",
+    "pages/signin/signin",
+    "pages/photo/photo",
+    "pages/rank/rank",
+    "pages/detail/detail",
+    "pages/like/like",
+    "pages/pic/pic",
+    "pages/login/login",
+    "pages/bookindex/bookindex",
+    "pages/seats/seats",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "商大校园",
+    "navigationBarTextStyle": "black"
+  },
+  "requiredPrivateInfos": [
+    "chooseLocation",
+    "chooseAddress",
+    "choosePoi",
+    "getLocation"
+  ],
+  "permission": {
+    "scope.userFuzzyLocation": {
+      "desc": "你的位置信息将用于小程序接口效果展示"
+    },
+    "scope.userLocation": {
+      "desc": "小程序提供服务"
+    }
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "tabBar": {
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图",
+        "iconPath": "/pages/image/map.png",
+        "selectedIconPath": "/pages/image/map (1).png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/pages/image/我的.png",
+        "selectedIconPath": "/pages/image/我的 (1).png"
+      }
+    ]
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

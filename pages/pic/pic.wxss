@@ -1,0 +1,166 @@
+/* pages/pic/pic.wxss */
+.img{
+	width: 100%;
+	display: inherit;
+}
+
+.img-2{
+	width:20%;
+	height: 20%;
+	display: inherit;
+	border-radius: 30rpx;
+	border: 2rpx solid black;
+	margin-top: -60rpx;
+	margin-right: 4%;
+	float: right;
+
+}
+
+.img-3{
+	height: 60px;
+	width: 60px;
+	/* padding-left: 80%;
+	padding-top: 60%; */
+	position: fixed;
+	display: block;
+	bottom: 10%;
+	right: 5%;
+	/* display: flex; */
+	z-index: 1;
+	/* display: block; */
+}
+
+.content{
+	height: 300vh;
+	display: flex;
+}
+
+.name{
+	font-size: 30rpx;
+	margin-top: -10rpx;
+	word-break: keep-all;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.right{
+	margin-left: 3%;
+	display: flex;
+	/* justify-items: center; */
+	/* flex-wrap: wrap; */
+	flex-direction: column;
+}
+
+.detail{
+	display: flex;
+	margin-top: 5%;
+	height: auto;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+	/* border-bottom-width: 2px;
+	border-bottom: black; */
+}
+
+/* .right{
+	display: ;
+} */
+
+.image{
+	width: 40px;
+	height: 40px;
+	padding-left: 17%;
+	border-radius: 10rpx;
+	/* flex-wrap: wrap;
+	flex-direction: column; */
+}
+
+.image_co{
+	display: flex;
+  	flex-direction: column;
+}
+
+
+.text{
+	top:5px;
+	bottom: 5px;
+	font-size:25rpx;
+	font-weight: bolder;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.image-2{
+	width: 80px;
+	height: 80px;
+	display: flex;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.image-4{
+		width: 20%; /* 设置图片宽度为100% */
+		height: auto; /* 根据宽度自动调整图片高度 */
+		object-fit: cover; /* 按比例缩放图片，覆盖整个容器 */
+		display: block; /* 设置图片为块级元素，使其占据整个父容器的宽度 */
+		margin-bottom: 10px; /* 给图片下方留出间距，可根据需要进行调整 */
+}
+
+.photo{
+	display: flex;
+	flex-direction: row;
+}
+
+
+.love{
+	width: 25px;
+	height: 25px;
+	padding-left:10%;
+	position: absolute;
+}
+
+.love_text{
+	font-size: small;
+	font-style: inherit;
+	position: absolute;
+	padding-left: 18%;
+	padding-top: 0.5%;
+}
+
+
+.style{
+	z-index:10000;
+	width:100%; 
+  }
+  .popup{
+	display: flex; 
+	align-items: center;
+	background:rgb(242, 242, 242,1);
+  }
+  .input{
+	width: 65%;
+	height: 60rpx; 
+	display:block; 
+	margin: 30rpx auto;
+	background: #fff;
+	font-size: 26rpx; /* 设定字体大小 */  
+	color: #333333; /* 设定字体颜色 */  
+	font-family: 'Arial', sans-serif; /* 设定字体类型 */  
+	font-weight: normal; /* 设定字体粗细 */  
+	text-align: left; /* 设定文本对齐方式 */  
+  }
+  .placeholderStyle{
+	font-size: 26rpx;
+	margin: 0 20rpx;
+  }
+  .button{
+	height: 60rpx;
+	width: 20%;
+	line-height:60rpx;
+	text-align: center; 
+	font-size: 25rpx;
+	box-shadow: 8rpx;
+	color:#979797;
+  }
+
+
+

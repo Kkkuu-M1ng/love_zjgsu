@@ -1,0 +1,60 @@
+/* pages/like/like.wxss */
+page{
+	background: #F3F3F3;
+}
+
+.list{
+	height: 100vh;
+}
+
+.item{
+	height: 120rpx;
+	width: 90%;
+	background-color: white;
+	margin-top: 30rpx;
+	margin-left: 5%;
+	border-radius: 25rpx;
+	display: flex;
+	align-items: center;
+}
+
+.image{
+	height: 100rpx;
+	width: 120rpx;
+	display: flex;
+	align-items: center;
+	margin-left: 4%;
+}
+
+.text{
+	font-size: 26rpx;
+	font-weight:bolder;
+
+}
+
+.star-img{
+	height: 30rpx;
+	width: 30rpx;
+	display: inline-block;
+}
+
+.right{
+	padding-left: 4%;
+}
+
+.text-num{
+	font-size: 25rpx;
+	padding-left: 2%;
+	/* 不换行 */
+	word-break: keep-all;
+}
+
+.index{
+	display: flex;
+	align-items: center;
+	margin-left: 2%;
+}
+.star{
+	display: flex;
+	justify-content: space-between;
+}

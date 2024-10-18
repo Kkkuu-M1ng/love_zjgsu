@@ -1,0 +1,22 @@
+<!--pages/like/like.wxml-->
+<scroll-view class="list">
+	<view wx:for="{{list}}" wx:key="id">
+		<view class="item" bind:tap="navi" data-id='{{item.id}}'>
+			<text class="index">{{index+1}}</text>
+			<image class="image" src="{{item.url}}"></image>
+			<view class="right">
+				<text class="text">{{item.name}}</text>
+				<view class="star">
+					<block wx:for="{{item.one}}">
+						<image class="star-img" src="/pages/image/star_fill.png"></image>
+					</block>
+					<block wx:for="{{item.two}}">
+						<image class="star-img" src="/pages/image/gray-star.png"></image>		
+					</block>
+					<text class="text-num">{{item.one*2}}.0分</text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+</scroll-view>

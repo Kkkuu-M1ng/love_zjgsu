@@ -1,0 +1,131 @@
+/* pages/me/me.wxss */
+.image{
+	width:100rpx;
+	height:100rpx;
+	border-radius: 50%;
+	margin-left: 50rpx;
+	/* margin-top: 50rpx; */
+
+}
+.avatar{
+	background-color:white;
+	height: 130px;
+}
+
+.sum{
+	display: flex;
+	align-items: center;
+	padding-top: 50rpx;
+}
+
+.avatar .character{
+	font-size:33rpx;
+	margin-left: 10px;
+}
+
+.item{
+	width: 90%;
+	background-color: white;
+	height: 100rpx;
+	border-radius: 25rpx;
+	margin-top: 25rpx;
+	margin-left: 5%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.item .item-front
+{
+	display: flex;
+	align-items: center;
+}
+
+.front-image{
+	height: 75rpx;
+	width: 75rpx;
+}
+
+.front-image2{
+	height: 100rpx;
+	width: 95rpx;
+	margin-left: -7%;
+	margin-bottom: 4%;
+}
+
+.front-image3{
+	height: 75rpx;
+    width: 70rpx;
+    margin-left:5rpx;
+    margin-right: 10rpx;
+}
+
+.front-image4{
+	height: 90rpx;
+    width: 85rpx;
+    margin-right: 0rpx;
+}
+
+.front-image5{
+	height: 80rpx;
+    width: 75rpx;
+    margin-right: 5rpx;
+    margin-left: 5rpx;
+}
+
+.item .item-behind{
+	display: flex;
+	align-items: center;
+}
+
+.behind-image{
+	height: 120rpx;
+	width: 100rpx;
+	position:relative
+}
+
+.item .item-front .front-character{
+	font-size: 25rpx;
+	margin-left: 25rpx;
+}
+
+.item .item-front .front-character2{
+	font-size: 25rpx;
+	margin-left: 15rpx;
+}
+
+
+
+.signin{
+	margin-top: -130rpx;
+	float: right;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	font-size: 30rpx;
+	border-radius: 50rpx;
+}
+
+.img{
+	width:55rpx;
+	padding-right: 5%;
+}
+
+page{
+	background: #F3F3F3;
+}
+
+.price{
+    margin-left:60rpx
+}
+
+.ma{
+    font-size: 24rpx;
+    padding-top: 20px;
+    padding-left: 25px;
+    max-width:270px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
