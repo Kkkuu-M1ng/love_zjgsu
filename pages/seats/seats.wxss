@@ -1,7 +1,7 @@
 .container {
   padding: 10px;
+  height: 100vh; /* 确保容器充满屏幕高度 */
 }
-
 
 .title {
   font-size: 18px;
@@ -14,6 +14,7 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 10px; /* 增加圆角 */
 }
 
 .floor-switch {
@@ -22,28 +23,51 @@
   margin-bottom: 20px;
 }
 
-.seats-table {
-  border: 1px solid #ccc;
+.floor-switch button {
+  flex: 1;
+  margin: 0 5px; /* 添加按钮间的间隔 */
+  padding: 10px;
+  border-radius: 10px; /* 添加圆角 */
+  background-color: #007aff;
+  color: white;
 }
 
-.seats-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: #f1f1f1;
-  padding: 10px;
+.seats {
+  display: flex; /* 使用flex布局 */
+  overflow-x: auto; /* 启用横向滚动 */
+  white-space: nowrap; /* 不换行 */
+  margin-bottom: 20px; /* 底部间距 */
 }
 
-.seats-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
+.seat-group {
+  display: inline-block; /* 使每个座位组在一行中 */
+  margin-right: 10px; /* 座位组之间的间距 */
+}
+
+.seat-number {
+  font-weight: bold; /* 加粗座位号 */
+  margin-bottom: 5px; /* 座位号与座位之间的间距 */
 }
 
 .seat-item {
-  flex: 1;
-  text-align: center;
-  padding: 10px;
+  display: flex;
+  flex-direction: column; /* 纵向排列时间段和状态 */
+  align-items: center; /* 水平居中 */
+  padding: 5px; /* 减少内边距 */
+  width: 60px; /* 设置每个座位项的宽度，稍微缩小 */
+  border-radius: 10px; /* 圆角 */
+  background-color: green; /* 默认按钮背景色 */
+  color: white;
   cursor: pointer;
+}
+
+.seat-item[style*='red'] {
+  background-color: red; /* 已约按钮的背景色 */
+}
+
+.time-slot {
+  font-size: 12px; /* 减小时间段字体大小 */
+  margin-bottom: 3px; /* 时间段与状态之间的间距 */
 }
 
 .confirm-button {
@@ -54,4 +78,5 @@
   text-align: center;
   border: none;
   border-radius: 20px;
+  cursor: pointer;
 }

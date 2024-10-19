@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/bookindex/bookindex",
+          "pathName": "pages/bookindex/bookindex",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/pic/pic",
           "pathName": "pages/pic/pic",
           "query": "id=1",
