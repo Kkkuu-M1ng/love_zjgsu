@@ -3,32 +3,29 @@
 
   <image class="library-image" src="/pages/image/banner.jpg" mode="aspectFill" />
 
-
   <view class="floor-switch">
     <button data-floor="1" bindtap="switchFloor">1楼</button>
     <button data-floor="2" bindtap="switchFloor">2楼</button>
-    <button data-floor="3" bindtap="switchFloor">3楼</button>
   </view>
 
-  <view class="seats-table">
-  <view class="seats-header">
-    <text>时间/座位</text>
-    <block wx:for="{{seatNumbers}}" wx:key="seatNumber">
-      <text>{{item}}</text>
+  <scroll-view scroll-x="true" class="seats">
+    <block wx:for="{{seats}}" wx:key="seatGroupIndex">
+      <view class="seat-group">
+        <text class="seat-number">{{item.seatNumber}}</text>
+        <block wx:for="{{item.timeSlots}}" wx:key="timeSlotIndex">
+          <view class="seat-item" 
+                data-id="{{item.id}}"  
+                bindtap="reserveSeat" 
+                style="background-color: {{item.status === 'reserved' ? 'red' : 'green'}};">
+            <text class="time-slot">{{item.timeSlot}}</text> <!-- 显示时间段 -->
+            <text class="seat-status">{{item.status === 'reserved' ? '已约' : '可约'}}</text>
+          </view>
+        </block>
+      </view>
     </block>
+  </scroll-view>
+
+  <view class="selected-info">
+    <button class="confirm-button" bindtap="confirmReservation">确认预约</button>
   </view>
-  <block wx:for="{{timeSlots}}" wx:key="timeSlot">
-    <view class="seats-row">
-      <text>{{item}}</text>
-      <block wx:for="{{seats}}" wx:key="id">
-        <view class="seat-item" data-id="{{item.id}}" bindtap="reserveSeat" style="background-color: {{item.status === 'reserved' ? 'red' : 'green'}};">
-          <text style="color: white;">{{item.status === 'reserved' ? '已约' : '可约'}}</text>
-        </view>
-      </block>
-    </view>
-  </block>
-</view>
-
-
-  <button class="confirm-button" bindtap="confirmReservation">预约资源</button>
 </view>

@@ -14,7 +14,6 @@ Page({
   },
 
   async loadSeats() {
-    // 清空座位数据
     this.setData({ seats: [] });
     console.log('当前楼层:', this.data.currentFloor);
 
@@ -32,7 +31,8 @@ Page({
     } else {
       console.log("没有找到座位数据");
     }
-  },
+},
+
 
   groupSeatsByNumber(seats) {
     const grouped = {};
@@ -109,8 +109,7 @@ Page({
 
   async confirmReservation() {
     const { selectedSeat, selectedTimeSlot } = this.data;
-    const userId = app.globalData.userId; // 获取当前用户ID
-
+  
     // 检查是否选择了座位
     if (!selectedSeat) {
       wx.showToast({
@@ -119,7 +118,7 @@ Page({
       });
       return;
     }
-
+  
     // 检查是否选择了时间段
     if (!selectedTimeSlot) {
       wx.showToast({
@@ -128,44 +127,41 @@ Page({
       });
       return;
     }
-
+  
     try {
-      // 更新座位状态为 reserved，并记录用户ID和预约时间
-      await wx.cloud.database().collection('seats').doc(selectedSeat).update({
+      // 调用云函数进行预约
+      const res = await wx.cloud.callFunction({
+        name: 'reserveSeat',
         data: {
-          status: 'reserved',
-          reservedBy: userId,
-          reservedAt: new Date() // 记录预约时间
+          seatId: selectedSeat // 只传递座位ID
         }
       });
-
-      // 将预约信息记录到 yyuser 集合
-      await wx.cloud.database().collection('yyuser').add({
-        data: {
-          userid: userId,     // 用户 ID
-          yyid: selectedSeat, // 座位 ID
-          yytime: selectedTimeSlot // 预约时间段
-        }
-      });
-
-      // 更新本地状态
-      const seats = this.data.seats.map(seatGroup => ({
-        ...seatGroup,
-        timeSlots: seatGroup.timeSlots.map(seat => {
-          if (seat.id === selectedSeat) { // 使用 id
-            seat.status = 'reserved'; // 更新座位状态为已约
-          }
-          return seat;
-        })
-      }));
-
-      // 重置选中的座位和时间段
-      this.setData({ seats, selectedSeat: null, selectedTimeSlot: null });
-
-      wx.showToast({
-        title: '预约成功',
-        icon: 'success'
-      });
+  
+      if (res.result.success) {
+        // 更新本地状态
+        const seats = this.data.seats.map(seatGroup => ({
+          ...seatGroup,
+          timeSlots: seatGroup.timeSlots.map(seat => {
+            if (seat.id === selectedSeat) {
+              seat.status = 'reserved';
+            }
+            return seat;
+          })
+        }));
+  
+        // 重置选中的座位和时间段
+        this.setData({ seats, selectedSeat: null, selectedTimeSlot: null });
+  
+        wx.showToast({
+          title: '预约成功',
+          icon: 'success'
+        });
+      } else {
+        wx.showToast({
+          title: res.result.error,
+          icon: 'none'
+        });
+      }
     } catch (err) {
       wx.showToast({
         title: '预约失败: ' + err.message,
@@ -173,4 +169,5 @@ Page({
       });
     }
   }
+  
 });
