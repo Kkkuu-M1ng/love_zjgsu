@@ -18,7 +18,7 @@ Page({
 
   navigateToProfile() {
     wx.navigateTo({
-      url: '/pages/my/my', // 替换为实际个人页面路径
+      url: '/pages/myseats/myseats', // 替换为实际个人页面路径
     });
   },
 

@@ -1,0 +1,43 @@
+.container {
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 26px; /* 增加字体大小 */
+  color: #007aff; /* 蓝色字体 */
+  font-family: 'Arial', sans-serif; /* 替换为你想要的字体 */
+  font-weight: bold; /* 加粗字体 */
+  text-align: center; /* 居中对齐 */
+}
+
+.reservation-list {
+  padding: 10px;
+}
+
+.reservation-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #007aff;
+  border-radius: 5px;
+  cursor: pointer; /* 指针样式 */
+}
+
+.seat-number,
+.time-slot,
+.status {
+  display: block; /* 使每个信息单独占一行 */
+  font-size: 18px; /* 增加字体大小 */
+  color: #007aff; /* 蓝色字体 */
+  font-family: 'Arial', sans-serif; /* 替换为你想要的字体 */
+  font-weight: bold; /* 加粗字体 */
+  text-align: left; /* 左对齐 */
+}
+
+.no-reservation {
+  text-align: center;
+  color: #888;
+}

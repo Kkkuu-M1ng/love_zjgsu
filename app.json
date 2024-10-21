@@ -13,7 +13,8 @@
     "pages/login/login",
     "pages/bookindex/bookindex",
     "pages/seats/seats",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/myseats/myseats"
   ],
   "window": {
     "backgroundTextStyle": "light",

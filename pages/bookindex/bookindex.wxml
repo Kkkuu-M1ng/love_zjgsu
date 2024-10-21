@@ -34,7 +34,7 @@
       <image class="footer-icon" src="/pages/image/map.png" /> 座位
     </view>
     <view class="footer-item" bindtap="navigateToProfile">
-      <image class="footer-icon" src="/pages/image/我的.png" /> 我的
+      <image class="footer-icon" src="/pages/image/我的.png" /> 我的预约
     </view>
   </view>
 </view>

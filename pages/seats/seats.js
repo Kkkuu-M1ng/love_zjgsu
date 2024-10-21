@@ -109,7 +109,8 @@ Page({
 
   async confirmReservation() {
     const { selectedSeat, selectedTimeSlot } = this.data;
-  
+    const openid = app.globalData.openid; // 获取 openid
+
     // 检查是否选择了座位
     if (!selectedSeat) {
       wx.showToast({
@@ -133,7 +134,9 @@ Page({
       const res = await wx.cloud.callFunction({
         name: 'reserveSeat',
         data: {
-          seatId: selectedSeat // 只传递座位ID
+          seatId: selectedSeat, // 只传递座位ID
+          openid: openid, // 添加 openid
+          action: 'reserve' // 预约操作
         }
       });
   

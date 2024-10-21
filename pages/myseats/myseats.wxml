@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="header">
+    <text class="title">我的预约</text>
+  </view>
+  
+  <view class="reservation-list">
+    <block wx:for="{{reservations}}" wx:key="id">
+      <view class="reservation-item" bindtap="showConfirmDialog" data-id="{{item.id}}">
+        <text class="seat-number">座位号: {{item.seatNumber}}</text>
+        <text class="time-slot">时间段: {{item.timeSlot}}</text>
+        <text class="status">状态: {{item.status}}</text>
+      </view>
+    </block>
+    <view wx:if="{{reservations.length === 0}}" class="no-reservation">
+      <text>您还没有预约任何座位</text>
+    </view>
+  </view>
+</view>
