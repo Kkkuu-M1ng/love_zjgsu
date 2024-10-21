@@ -13,37 +13,6 @@ Page({
     currentmarker:null,
     navi_url:null,
     marker:[],
-  //   markers:[{
-  //     id:1,
-  //     latitude:'30.3109937',
-  //     longitude:'120.3930075',
-  //     iconPath:'../image/定位.png',
-  //     title:'云滨站',
-  //     width:30,
-  //     height:30,
-  //     explain:"浙江工商大学的地铁站"
-  //   },
-  //   {
-  //     id:2,
-  //     latitude:'30.31113375',
-  //     longitude:'120.3762090',
-  //     iconPath:'../image/定位.png',
-  //     title:'文海南路站',
-  //     width:30,
-  //     height:30,
-  //     explain:""
-  //   },
-  //   {
-  //     id:3,
-  //     latitude:'30.3027819',
-  //     longitude:'120.3817988',
-  //     iconPath:'../image/定位.png',
-  //     title:'云水站',
-  //     width:30,
-  //     height:30,
-  //     explain:""
-  //   }
-  // ],
     showLocation:true,
     enablebuilding:true
   },
