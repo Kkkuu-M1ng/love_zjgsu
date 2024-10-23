@@ -14,7 +14,10 @@
     "pages/bookindex/bookindex",
     "pages/seats/seats",
     "pages/my/my",
-    "pages/myseats/myseats"
+    "pages/myseats/myseats",
+    "pages/bookbadminton/bookbadminton",
+    "pages/badminton/badminton",
+    "pages/mybadminton/mybadminton"
   ],
   "window": {
     "backgroundTextStyle": "light",

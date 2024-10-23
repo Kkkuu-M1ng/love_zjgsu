@@ -1,0 +1,37 @@
+<view class="container">
+  <text class="title">文体中心羽毛球馆</text>
+
+  <image class="court-image" src="/pages/image/banner.jpg" mode="aspectFill" />
+
+  <scroll-view scroll-x="true" class="seats">
+    <block wx:for="{{seats}}" wx:key="seatGroupIndex">
+      <view class="seat-group">
+        <text class="seat-number">{{item.seatNumber}}</text>
+        <block wx:for="{{item.timeSlots}}" wx:key="timeSlotIndex">
+          <view class="seat-item" 
+                data-id="{{item.id}}"  
+                bindtap="reserveSeat" 
+                style="background-color: {{item.status === 'reserved' ? 'red' : 'green'}};">
+            <text class="time-slot">{{item.timeSlot}}</text> <!-- 显示时间段 -->
+            <text class="seat-status">{{item.status === 'reserved' ? '已约' : '可约'}}</text>
+          </view>
+        </block>
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class="selected-info">
+    <button class="confirm-button" bindtap="confirmReservation">确认预约</button>
+  </view>
+
+  <view class="footer">
+    <view class="footer-item" bindtap="navigateToReservations">
+      <image class="footer-icon" src="/pages/image/reservations.png" />
+      <text>预约</text>
+    </view>
+    <view class="footer-item" bindtap="navigateTome">
+      <image class="footer-icon" src="/pages/image/home.png" />
+      <text>我的</text>
+    </view>
+  </view>
+</view>

@@ -78,9 +78,20 @@ Page({
   //   })
   // },
   navi2(e) {
-    wx.navigateTo({
-      url: '/pages/bookindex/bookindex',
-    })
+    const id = e.currentTarget.dataset.id;
+    console.log(id);
+    let targetUrl;
+    if (id === 1) {
+        targetUrl = '/pages/bookindex/bookindex';
+    } else if (id === 2) {
+        targetUrl = '/pages/bookbadminton/bookbadminton';
+    }
+
+    if (targetUrl) {
+        wx.navigateTo({
+            url: targetUrl,
+        });
+    }
     // wx.getLocation({
     //     type: 'gcj02', // 使用 gcj02 坐标系
     //     success: (res) => {
